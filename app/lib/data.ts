@@ -155,6 +155,12 @@ export async function fetchInvoicesPages(query: string) {
 export async function fetchInvoiceById(id: string) {
   noStore();
   try {
+    /**
+     * This code for tutorial 13 not found error in invoice
+     */
+    // const invoice: any[] = [];
+    // console.log(invoice); // Invoice is an empty array []
+    // return invoice[0];
     const data = await sql<InvoiceForm>`
       SELECT
         invoices.id,
